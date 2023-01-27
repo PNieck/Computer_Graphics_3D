@@ -1,6 +1,6 @@
 ﻿namespace Computer_Graphics_3D
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         ///  Required designer variable.
