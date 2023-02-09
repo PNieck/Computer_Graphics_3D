@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Computer_Graphics_3D.Models
 {
-    internal class Point
+    public class Point
     {
-        Vector4 _vector;
+        private Vector3 _vector;
         
-        public Vector4 vector { get { return _vector; } set { _vector = value; } }
+        public Vector3 vector { get { return _vector; } set { _vector = value; } }
 
         public float x
         {
@@ -31,23 +31,10 @@ namespace Computer_Graphics_3D.Models
             set { _vector.Z = value; }
         }
 
-        public float w
-        {
-            get { return _vector.W; }
-            set { _vector.W = value; }
-        }
-
         Point(float x, float y, float z)
         {
-            _vector = new Vector4(x, y, z, 1);
+            _vector = new Vector3(x, y, z);
         }
 
-        void normalise()
-        {
-            x /= w;
-            y /= w;
-            z /= w;
-            w = 1;
-        }
     }
 }
